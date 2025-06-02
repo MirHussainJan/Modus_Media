@@ -1,1 +1,54 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap");
+/* 
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --navy: #0a2158;
+  --blue-custom: #0074d9;
+}
+
+html,
+body {
+  direction: rtl;
+  font-family: "Heebo", Arial, sans-serif;
+}
+
+/* Custom Tailwind classes */
+@layer utilities {
+  .bg-navy {
+    background-color: var(--navy);
+  }
+
+  .text-navy {
+    color: var(--navy);
+  }
+
+  .bg-blue-custom {
+    background-color: var(--blue-custom);
+  }
+
+  .text-blue-custom {
+    color: var(--blue-custom);
+  }
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .contact-sidebar {
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    writing-mode: horizontal-tb !important;
+    border-radius: 0.5rem !important;
+    padding: 0.75rem !important;
+    margin-top: 1rem !important;
+    text-align: center !important;
+  }
+}

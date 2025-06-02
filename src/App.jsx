@@ -1,8 +1,15 @@
-import React from 'react'
+import Header from "./components/Header"
+import PackagesSection from "./components/PackagesSection"
+import Footer from "./components/Footer"
+import "./index.css"
 
-const App = () => {
+function App() {
   return (
-    <div className='text-3xl font-bold underline'>App</div>
+    <div className="font-heebo bg-gray-100 text-gray-800 min-h-screen">
+      <Header />
+      <PackagesSection />
+      <Footer />
+    </div>
   )
 }
 
